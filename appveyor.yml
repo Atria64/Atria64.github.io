@@ -2,6 +2,10 @@ branches:
   only:
     - master
 
+environment:
+  my_variable:
+    secure: BVmELxluJRTbkc/4QyAEPupUgZVz46OZBxb3HJ77w9kk8bfhYPIOvFaycIj8njYw
+
 install:
   - git submodule update --init --recursive
   - mkdir ..\Wyam
