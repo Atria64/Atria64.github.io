@@ -1,0 +1,16 @@
+#n Wyam.Razor
+#n Wyam.GitHub
+
+string username = "Atria64";
+Pipelines.Add(
+	ReadFiles("index.cshtml"),
+	// Add GitHub datas
+	GitHub()
+		.WithRequest("User",x => x.User.Get(username).Result)
+		.WithRequest("Repos",x => x.Repository.GetAllForUser(username).Result),
+	//Render
+	Razor(),
+	WriteFiles(".html"),
+	// Copy all resources to the output folder
+    CopyFiles("**/*{!.cshtml,.*}")
+);
