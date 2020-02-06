@@ -2,8 +2,10 @@
 #n Wyam.GitHub
 
 string username = "Atria64";
-Pipelines.Add(
-	ReadFiles("index.cshtml"),
+string[] pages = {"index","daggerBreak"};
+foreach(var item in pages){
+	Pipelines.Add(
+	ReadFiles(item +".cshtml"),
 	// Add GitHub datas
 	GitHub()
 		.WithRequest("User",x => x.User.Get(username).Result)
@@ -13,4 +15,5 @@ Pipelines.Add(
 	WriteFiles(".html"),
 	// Copy all resources to the output folder
     CopyFiles("**/*{!.cshtml,.*}")
-);
+	);
+}

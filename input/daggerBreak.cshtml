@@ -12,7 +12,7 @@
 
 <html>
     <head>
-        <title>@user.Name</title>
+        <title>@user.Name:DaggerBreak</title>
         <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -34,9 +34,9 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#repo" id="repo-link"><span class="icon solid fa-th">Repositories</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="https://atria64.github.io/portfolio/" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="https://atria64.github.io/portfolio/" id="repo-link"><span class="icon solid fa-th">Repositories</span></a></li>
+								<li><a href="https://atria64.github.io/portfolio/" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 							</ul>
 						</nav>
 
@@ -64,43 +64,23 @@
 					<section id="top" class="one dark cover">
 						<div class="container">
 							<header>
-								<h2 class="alt">Hi! I'm <strong>@user.Name</strong>, this is my portfolio.</h2>
+								<h2 class="alt">Dagger Break</h2>
 								<br />
 							</header>
 						</div>
 					</section>
                 
-				<!--Repositories-->
-					<section id="repo" class="three">
-						<div class="container">
-                    		<h2>Repositories</h2>
-                        	@foreach(Repository repo in repos.Where(x => !x.Fork).OrderByDescending(x => x.StargazersCount))
-                        	{
-                            	<h3>@repo.Name</h3>
-                            	<p>@repo.StargazersCount stars, @repo.ForksCount forks</p>
-                            	<p><a href="@repo.HtmlUrl">Link</a></p>
-                            	@if(repo.Homepage != null)
-                            	{
-                                	<p><a href="@repo.Homepage">Homepage</a></p>
-                            	}
-                            	<p>@repo.Description</p>
-                            	<p>Created at @repo.CreatedAt.ToString("MM/dd/yyyy h:mm tt")</p>
-                        	}
-						</div>
-					</section>
-
-				<!-- About Me -->
+				<!-- About this -->
 					<section id="about" class="three">
 						<div class="container">
 
 							<header>
-								<h2>About Me</h2>
+								<h2>About this</h2>
 							</header>
 
 							<a href="#" class="image featured" width = "600"><img src="images/pic.jpg" alt="" /></a>
 
-							<p>hogehoge~</p>
-							<p><a href="/daggerBreak">daggerBreak</a></p>
+							<p>Add a description...</p>
 
 						</div>
 					</section>
