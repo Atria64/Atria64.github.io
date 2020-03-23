@@ -1,0 +1,31 @@
+/*
+    自作css
+*/
+
+.myCover {
+    padding: 10em 0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100%;
+}
+
+.myCover::before {
+    /* 透過した黒を重ねる */
+    background-color: black;
+    opacity: .6;
+    /* どの範囲に重ねるかを指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
+.myCover-inner {
+    position: absolute;
+    padding: 0 2em 0 2em;
+    text-align: center;
+    width: 100%;
+}
