@@ -1,6 +1,7 @@
 @using Octokit;
 @{
     User user = Model.Get<User>("User");
+	string[] s = {"1.PNG","2.PNG","3.JPG","4.JPG","5.PNG"};
 }
 <!DOCTYPE HTML>
 <!--
@@ -35,6 +36,7 @@
 							<ul>
 								<li><a href="#top1" id="top-link"><span class="icon solid fa-home">Top</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-info">About this</span></a></li>
+								<li><a href="#images" id="Images-link"><span class="icon solid fa-images">Images</span></a></li>
 								<li><a href="#links" id="links-link"><span class="icon solid fa-link">Links</span></a></li>
 								<li><a href="https://atria64.github.io/portfolio/" id="return-link"><span class="icon solid fa-undo-alt">Return Top</span></a></li>
 							</ul>
@@ -61,7 +63,7 @@
 			<div id="main">
 				
 				<!-- Intro -->
-					<div id="top1" class="myCover" style="background-image: url('images/daggerBreakHeader.jpg');">
+					<div id="top1" class="myCover" style="background-image: url('images/daggerBreak/daggerBreakHeader.jpg');">
 						<div class="myCover-inner">
 							<header>
 								<h2 class="alt" style="color: white;">Dagger Break</h2>
@@ -86,6 +88,22 @@
 
 						</div>
 					</section>
+
+				<!-- Images -->
+					<section id="Images" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Images</h2>
+							</header>
+							
+							@foreach (var item in s)
+							{
+								<img style="display: inline-block;" src="images/daggerBreak/@item" width="30%" height="auto" alt="">
+							}
+						</div>
+					</section>
+
 
 				<!-- Links -->
 					<section id="links" class="three">
