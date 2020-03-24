@@ -1,7 +1,7 @@
 @using Octokit;
 @{
     User user = Model.Get<User>("User");
-    IReadOnlyList<Repository> repos = Model.Get<IReadOnlyList<Repository>>("Repos");
+	string[] s = {"1.PNG","2.PNG","3.JPG","4.PNG","5.JPG"};
 }
 <!DOCTYPE HTML>
 <!--
@@ -34,10 +34,11 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Top</span></a></li>
-								<li><a href="#about" id="repo-link"><span class="icon solid fa-info">About this</span></a></li>
-								<li><a href="#links" id="about-link"><span class="icon solid fa-link">Links</span></a></li>
-								<li><a href="https://atria64.github.io/portfolio/" id="return-link"><span class="icon solid fa-undo-alt">Return Top</span></a></li>
+								<li><a href="#top1" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-info">About this</span></a></li>
+								<li><a href="#images" id="Images-link"><span class="icon solid fa-images">Images</span></a></li>
+								<li><a href="#links" id="links-link"><span class="icon solid fa-link">Links</span></a></li>
+								<li><a href="/" id="return-link"><span class="icon solid fa-undo-alt">Return Top</span></a></li>
 							</ul>
 						</nav>
 
@@ -62,32 +63,52 @@
 			<div id="main">
 				
 				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+					<div id="top1" class="myCover" style="background-image: url('images/daggerBreak/daggerBreakHeader.jpg');">
+						<div class="myCover-inner">
 							<header>
-								<h2 class="alt">Dagger Break</h2>
+								<h2 class="alt" style="color: white;">Dagger Break</h2>
+								<h3 class="alt" style="color: white;">FUN Processing Award 2019 最優秀作品</h3>
 								<br />
 							</header>
 						</div>
-					</section>
+					</div>
                 
 				<!-- About this -->
-					<section id="about" class="three">
+					<section id="about" class="two">
 						<div class="container">
 
 							<header>
 								<h2>About this</h2>
 							</header>
 
-							<a href="#"  margin= "0 auto" width = "90%" max-height = "480px" ><img src="images/daggerBreak.gif" width="70%" alt="" /></a>
+							<img src="images/daggerBreak.gif" width="60%" alt="" />
+							<p>DaggerBreak(ダガーブレイク)はProcessingで作成されたブロック崩しゲームです。<br>
+							プレイヤーはダガーの角度を調整し発射することで、目標ブロックの破壊を目指します。</p>
 
-							<p>DaggerBreak(ダガーブレイク)はProcessingで作成されたブロック崩しゲームです。<br>プレイヤーはダガーの角度を調整し発射することで、目標ブロックの破壊を目指します。<br>なお、このゲームはFUN Processing Award 2019の最優秀作品に選ばれました。</p>
+							<img src="images/daggerBreak/FUNProcessingAward2019.jpg" width="50%" alt="" />	
+							<p>また、このゲームはFUN Processing Award 2019の最優秀作品に選ばれました。</p>
 
 						</div>
 					</section>
 
+				<!-- Images -->
+					<section id="images" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Images</h2>
+							</header>
+							
+							@foreach (var item in s)
+							{
+								<img style="display: inline-block;" src="images/daggerBreak/@item" width="30%" height="auto" alt="">
+							}
+						</div>
+					</section>
+
+
 				<!-- Links -->
-					<section id="links" class="three">
+					<section id="links" class="four">
 						<div class="container">
 
 							<header>
@@ -106,7 +127,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Atria. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Atria. All rights reserved.</li><li>Design support: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>

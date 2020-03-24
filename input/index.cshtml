@@ -61,7 +61,7 @@
 			<div id="main">
 				
 				<!-- Intro -->
-					<section id="top1" class="one dark cover">
+					<section id="top1" class="mytop dark cover" >
 						<div class="container">
 							<header>
 								<h2 class="alt">Hi! I'm <strong>@user.Name</strong>, this is my portfolio.</h2>
@@ -71,7 +71,7 @@
 					</section>
                 
 				<!--Repositories-->
-					<section id="repo" class="three">
+					<section id="repo" class="two">
 						<div class="container">
                     		<h2>Repositories</h2>
                         	@foreach(Repository repo in repos.Where(x => !x.Fork).OrderByDescending(x => x.StargazersCount))
@@ -97,9 +97,9 @@
 								<h2>About Me</h2>
 							</header>
 
-							<a href="#" class="image featured" width = "600"><img src="images/pic.jpg" alt="" /></a>
+							<img src="images/top/about_cover.jpg" alt="" width="80%"/>
 
-							<p>hogehoge~</p>
+							<p>.NET技術が大好きで、なんでもC#で書こうとします。</p>
 							<p><a href="./daggerBreak">daggerBreak</a></p>
 
 						</div>
@@ -112,7 +112,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Atria. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Atria. All rights reserved.</li><li>Design support: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>
