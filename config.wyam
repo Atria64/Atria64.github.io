@@ -2,7 +2,7 @@
 #n Wyam.GitHub
 
 string username = "Atria64";
-string[] pages = {"index","daggerBreak"};
+string[] pages = {"index","daggerBreak","TwD3"};
 foreach(var item in pages){
 	Pipelines.Add(
 	ReadFiles(item +".cshtml"),
